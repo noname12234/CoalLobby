@@ -1,0 +1,27 @@
+name: CoalLobby
+version: '1.0-SNAPSHOT'
+main: vk.coalstudio.ru.coallobby.CoalLobby
+api-version: 1.13
+prefix: CoalStudio
+authors: [ CoalStudio ]
+description: Разнообразные команды для вашего лобби
+website: https://vk.com/coalstudio
+commands:
+  fly:
+    aliases:
+      - flying
+      - coalfly
+  lighting:
+    aliases:
+      - lt
+      - coallt
+      - coallight
+  firework:
+    aliases:
+      - fw
+      - coalfw
+      - coalfirework
+  coallobby:
+    aliases:
+      - coallobbyreload
+      - coalrl
