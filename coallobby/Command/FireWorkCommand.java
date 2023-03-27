@@ -9,22 +9,26 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Firework;
 import org.bukkit.entity.Player;
 import org.bukkit.event.Listener;
+import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.inventory.meta.FireworkMeta;
 import vk.coalstudio.ru.coallobby.CoalLobby;
 
 import java.util.Random;
 
 public class FireWorkCommand implements CommandExecutor, Listener {
-    String prefix = CoalLobby.getInstance().getConfig().getString("prefix");
+	
+	private final CoalLobby instance = CoalLobby.getInstance();
+    String prefix = ChatColor.translateAlternateColorCodes('&', instance.getConfig().getString("prefix"));
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if(CoalLobby.getInstance().getConfig().getBoolean("cmdfirework") == true){
-            if (!(sender instanceof Player) && command.getName().equalsIgnoreCase("firework")){
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', prefix) + ChatColor.translateAlternateColorCodes('&', CoalLobby.getInstance().getConfig().getString("no_console")));
+    	FileConfiguration config = instance.getConfig();
+        if (config.getBoolean("cmdfirework") == true) {
+            if (!(sender instanceof Player) && command.getName().equalsIgnoreCase("firework")) {
+                sender.sendMessage(prefix + ChatColor.translateAlternateColorCodes('&', config.getString("no_console")));
                 return true;
             }
-            if(sender.hasPermission("coallobby.firework")){
+            if (sender.hasPermission("coallobby.firework")) {
                 Random random = new Random();
                 Color color1 = Color.RED;
                 int color = random.nextInt(16) + 1;
@@ -161,14 +165,14 @@ public class FireWorkCommand implements CommandExecutor, Listener {
                 data.addEffects(FireworkEffect.builder().withColor(color1).withColor(color2).with(f).withFlicker().build());
                 data.setPower(1);
                 firework.setFireworkMeta(data);
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', prefix) + ChatColor.translateAlternateColorCodes('&', CoalLobby.getInstance().getConfig().getString("fireworkmsg")));
+                sender.sendMessage(prefix + ChatColor.translateAlternateColorCodes('&', config.getString("fireworkmsg")));
                 return true;
-            }else{
-                sender.sendMessage(ChatColor.translateAlternateColorCodes('&', prefix) + ChatColor.translateAlternateColorCodes('&', CoalLobby.getInstance().getConfig().getString("no_permission")));
+            } else {
+                sender.sendMessage(prefix + ChatColor.translateAlternateColorCodes('&', config.getString("no_permission")));
                 return true;
             }
-        }else{
-            sender.sendMessage(ChatColor.translateAlternateColorCodes('&', prefix) + ChatColor.translateAlternateColorCodes('&', CoalLobby.getInstance().getConfig().getString("no_activate")));
+        } else {
+            sender.sendMessage(prefix + ChatColor.translateAlternateColorCodes('&', config.getString("no_activate")));
             return true;
         }
     }

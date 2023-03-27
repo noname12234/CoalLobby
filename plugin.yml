@@ -1,5 +1,5 @@
 name: CoalLobby
-version: '1.0-SNAPSHOT'
+version: '1.2'
 main: vk.coalstudio.ru.coallobby.CoalLobby
 api-version: 1.13
 prefix: CoalStudio
