@@ -1,0 +1,28 @@
+name: CoalLobby
+version: '${project.version}'
+main: coalstudio.coallobby.CoalLobby
+api-version: 1.15
+prefix: CoalStudio
+authors: [ ILeZzoV ]
+description: Fun commands for your lobby
+website: https://www.spigotmc.org/resources/coallobby-interesting-opportunities-for-your-lobby.108887/
+commands:
+  fly:
+    aliases:
+      - flying
+      - полет
+  lighting:
+    aliases:
+      - lt
+      - молния
+  firework:
+    aliases:
+      - fw
+      - салют
+  coallobby:
+    aliases:
+      - coallobbyreload
+      - coalrl
+  spit:
+    aliases:
+      - плюнуть

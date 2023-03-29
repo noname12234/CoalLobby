@@ -1,0 +1,116 @@
+#The plugin was developed by ILeZzoV (DS: ILeZzoV#0132)"
+#Source code: https://github.com/ILeZzoV/CoalLobby
+#CoalLobby is a plugin that will allow you to diversify your lobby or server hub by adding interesting commands
+#Found a bug? - DS: @ILeZzoV#0132
+#Support the developer:
+#QiWi - https://qiwi.com/n/ILEZOV
+#DonatioAlerts - https://www.donationalerts.com/r/ilezov
+
+
+#░█████╗░░█████╗░░█████╗░██╗░░░░░██╗░░░░░░█████╗░██████╗░██████╗░██╗░░░██╗
+#██╔══██╗██╔══██╗██╔══██╗██║░░░░░██║░░░░░██╔══██╗██╔══██╗██╔══██╗╚██╗░██╔╝
+#██║░░╚═╝██║░░██║███████║██║░░░░░██║░░░░░██║░░██║██████╦╝██████╦╝░╚████╔╝░
+#██║░░██╗██║░░██║██╔══██║██║░░░░░██║░░░░░██║░░██║██╔══██╗██╔══██╗░░╚██╔╝░░
+#╚█████╔╝╚█████╔╝██║░░██║███████╗███████╗╚█████╔╝██████╦╝██████╦╝░░░██║░░░
+#░╚════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚══════╝░╚════╝░╚═════╝░╚═════╝░░░░╚═╝░░░
+
+
+#Prefix that will be displayed before each plugin message
+prefix: "&6CoalLobby &8» "
+
+#Command /lighting | Permission: coallobby.lighting - permission to use the command
+cmdlighting: true #true command is enabled. false - the command is disabled
+lightmsg: "&fLighting!" #Is output when the command is executed successfully
+
+#Command/firework | Permission: coallobby.firework - permission to use the command
+cmdfirework: true #true command is enabled. false - the command is disabledа
+fireworkmsg: "&fFirework!" #Is output when the command is executed successfully
+
+#Command /fly | Permission: coallobby.fly - permission to use the command
+cmdfly: true #true command is enabled. false - the command is disabledа
+fly_enable: "&fFlyinq is &aenabled! &fBut just don't fly into space :)" #Is output when the command is executed successfully
+fly_disabled: "&fFlying is &cdisabled! &fWe flew and that's enough" #Is output when the command is executed successfully
+
+#Command /spit | Permission: coallobby.spit -  - permission to use the command
+cmdspit: true #true command is enabled. false - the command is disabledа
+spit: "&fSpit!" #Is output when the command is executed successfully
+
+#Settings with Lobby
+damage: false # | true - is enabled, false - is disabled
+food: false #Fasting | true - is enabled, false - is disabled
+fire: false #Fire damage | true - is enabled, false - is disabled
+game mode two: true #Adventure mode when logging on to the server | true - is enabled, false - is disabled
+no_falling_abyss: true #Teleportation when falling into the abyss
+message_join_server: true #Messages when logging in to the server
+message_leave_server: true #Messages when exiting the server
+height: 0 #The height at which teleportation will occur
+no_fly_high: true #Teleportation at high flight
+fly_height: 100 # The height at which teleportation will occur
+level: true #Give a level to a player when entering
+level_amount: 2023 #The level that will be issued at the entrance
+
+
+#Settings for messages when falling into the abyss
+disable_message: false #Disable message output to the chat
+disable_title: false #Disable message output to the screen
+disable_bar: false #Disable message output to the bar
+disable_sound: false #Mute sound
+
+#Settings for messages when taking off to a high altitude
+disable_fly_message: false #Disable message output to chat
+disable_fly_title: false #Disable message output to the screen
+disable_fly_bar: false #Disable message output to the bar
+disable_fly_sound: false #Mute sound
+
+#Settings for messages when logging in and out to the server
+disable_join_message: false #Disable message output to the chat
+disable_join_title: false #Disable message output to the screen
+disable_join_bar: false #Disable message output to the bar
+disable_join_sound: false #Mute sound
+disable_join_message_global: false #Disable message output to the global chat when a player logs on to the server
+disable_leave_message_global: false #Disable the message output to the global chat when the player exits the server
+
+#Messages
+no_console: "&cThis command is for players only O_o" #Is output when executing a command for players by the console
+no_activate: "&cThis command is disabled by the administration O_o" #Is output when the command is disabled
+no_permission: "&cYou don't have permission to execute this command O_o" #Is out put when player has not permission
+reload: "&fThe plugin has been successfully reloaded" #Output after executing the command /coallobby reload
+help_message: "&6CoalLobby &8| &fHelp on commands \n&e/fw&f- launch a salute \n&e/lt&f- strike with lightning \n&e/fly &f- enable flight mode\n&e/coallobby reload &f- restart the plugin" #Output after executing the command /coallobby
+
+#Messages | Falling into the Abyss
+no_fall_chat: "&fYou fell into the abyss, but someone saved you... :)" #Is displayed in the chat when the player falls into the abyss
+no_fall_bar: "&fYou are teleported to spawn" #Is displayed just above the item slots when the player falls into the abyss
+no_fall_title: "&cYou have fallen into the abyss" #Is displayed when the player falls into the abyss
+no_fall_subtitle: "&fBut someone saved you... :)" ##Output under <no_fall_title> when the player falls into the abyss
+
+#Сообщения | Takeoff to a high altitude
+no_fly_chat: "&fYou can't go into space :("  #Is displayed in the chat when the player flies high
+no_fly_bar: "&fYou are teleported to spawn" #Is displayed just above the slots with items when the player flies high
+no_fly_title: "&cYou flew away" #Is displayed on the screen when the player flies high
+no_fly_subtitle: "&fNo need to say goodbye in the ground" #Output under <no_fall_title> when the player flies high"
+
+#Messages | Logging in and out of the server
+join_server_chat: "&fWelcome to the server! \n&fThe server use&6CoalLobby" #Is displayed to the player in the chat when he enters the server | Without a prefix
+join_server_bar: "&fWelcome to the server" #Is displayed just above the slots with items when the player enters the server
+join_server_title: "&fWelcome" #Is displayed when the player logs on to the server
+join_server_subtitle: "&fUpdate &c&l Anarchy &f and &e&lBedWars" #Output under <join_server_title> when a player logs on to the server
+join_server_global: "&8[&a+&8] &f{player} joined the game!" #Is output to all server players when the player logs on to the server
+quit_server_global: "&8[&c-&8] &f{player} logged out of the server!" #All server players are output when the player exits the server
+
+#Double jump
+double_jump: true #Enable double jump double_message
+double_message: true #Message for double jump
+double_sound: true #Sound for double jump
+double_effect: true #Spawn effects for double jump
+double_message_chat: "&fWow! That's a jump" #Is output when the player makes a double jump
+
+#Звуки | Список: https://gist.github.com/Andre601/1ab3b4fabd0010ae241156333491c379
+fall_sound: "ENTITY_PLAYER_LEVELUP" #Sound when falling into the abyss
+join_sound: "ENTITY_PLAYER_LEVELUP" #Sound to all players when a player logs on to the server
+quit_sound: "ENTITY_PLAYER_LEVELUP" #Sound to all players when the player exits the server
+fly_sound: "ENTITY_PLAYER_LEVELUP" #Sound when a player takes off to a forbidden height
+jump_sound: "ENTITY_VILLAGER_YES" #Double jump sound
+
+
+
+
